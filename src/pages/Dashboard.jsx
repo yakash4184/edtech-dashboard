@@ -10,7 +10,7 @@ export default function Dashboard() {
       <aside className="sidebar">
         <h2>EdTech</h2>
         <ul>
-          <li className="active">Dashboard</li>
+          <li className="active">Dashboa</li>
           <li>My Courses</li>
           <li>Assignments</li>
           <li>Profile</li>
