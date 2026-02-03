@@ -6,7 +6,7 @@ const Dashboard = () => {
       
       {/* Sidebar */}
       <aside className="sidebar">
-        <h2 className="logo">EdTecAKASH</h2>
+        <h2 className="logo">EdTech</h2>
         <nav>
           <a className="active">Dashboard</a>
           <a>My Courses</a>
