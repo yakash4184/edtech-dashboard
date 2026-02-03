@@ -1,71 +1,73 @@
 import "./Dashboard.css";
-import reactImg from "../assets/react.png";
-import jsImg from "../assets/js.png";
-import webImg from "../assets/web.png";
 
-export default function Dashboard() {
+const Dashboard = () => {
   return (
     <div className="dashboard">
+      
       {/* Sidebar */}
       <aside className="sidebar">
-        <h2>EdTech</h2>
-        <ul>
-          <li className="active">Dashboa</li>
-          <li>My Courses</li>
-          <li>Assignments</li>
-          <li>Profile</li>
-          <li className="logout">Logout</li>
-        </ul>
+        <h2 className="logo">EdTecAKASH</h2>
+        <nav>
+          <a className="active">Dashboard</a>
+          <a>My Courses</a>
+          <a>Assignments</a>
+          <a>Profile</a>
+          <a>Logout</a>
+        </nav>
       </aside>
 
-      {/* Main */}
-      <main className="content">
-        <h1>Student Dashboard 👋</h1>
-        <p className="welcome">Welcome back, Akash</p>
+      {/* Main Content */}
+      <main className="main">
+        
+        {/* Header */}
+        <header className="header">
+          <h1>Student Dashboard</h1>
+          <p>Welcome back, Akash 👋</p>
+        </header>
 
-        {/* Stats */}
-        <div className="stats">
-          <div className="card">📘 Courses <span>6</span></div>
-          <div className="card">✅ Completed <span>3</span></div>
-          <div className="card">⏳ Pending <span>3</span></div>
-        </div>
-
-        {/* Courses */}
-        <h2>My Courses</h2>
-        <div className="courses">
-          <Course img={reactImg} title="React Basics" progress="60" />
-          <Course img={jsImg} title="JavaScript Mastery" progress="40" />
-          <Course img={webImg} title="Web Development" progress="80" />
-        </div>
-
-        {/* Testimonials */}
-        <h2>What Students Say</h2>
-        <div className="testimonials">
-          <div className="testimonial">
-            ⭐⭐⭐⭐⭐  
-            <p>“This platform changed my career!”</p>
-            <strong>— Rahul</strong>
+        {/* Stats Cards */}
+        <section className="stats">
+          <div className="card">
+            <h3>📚 Courses</h3>
+            <p>6 Enrolled</p>
           </div>
-          <div className="testimonial">
-            ⭐⭐⭐⭐☆  
-            <p>“Very practical & easy to learn.”</p>
-            <strong>— Neha</strong>
+
+          <div className="card">
+            <h3>✅ Completed</h3>
+            <p>3 Courses</p>
           </div>
-        </div>
+
+          <div className="card">
+            <h3>⏳ Pending</h3>
+            <p>3 Courses</p>
+          </div>
+        </section>
+
+        {/* Course List */}
+        <section className="courses">
+          <h2>My Courses</h2>
+
+          <div className="course-list">
+            <div className="course">
+              <h4>React Basics</h4>
+              <p>Progress: 60%</p>
+            </div>
+
+            <div className="course">
+              <h4>JavaScript Mastery</h4>
+              <p>Progress: 40%</p>
+            </div>
+
+            <div className="course">
+              <h4>Web Development</h4>
+              <p>Progress: 80%</p>
+            </div>
+          </div>
+        </section>
+
       </main>
     </div>
   );
-}
+};
 
-function Course({ img, title, progress }) {
-  return (
-    <div className="course-card">
-      <img src={img} alt={title} />
-      <h3>{title}</h3>
-      <div className="progress">
-        <div style={{ width: `${progress}%` }}></div>
-      </div>
-      <span>{progress}% Completed</span>
-    </div>
-  );
-}
+export default Dashboard;
